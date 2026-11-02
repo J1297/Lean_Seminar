@@ -1,0 +1,6 @@
+name = "lean_seminar"
+defaultTargets = ["lean_seminar"]
+
+[[lean_exe]]
+name = "lean_seminar"
+root = "Main"
