@@ -38,14 +38,11 @@ def double (n : Nat) : Nat :=
 -/
 
 -- Typfehler
-#check 2 + (3 = 3)
-#eval 2 + (3 = 3) -- Fehler: Typen stimmen nicht überein
+#check (true : Nat)
 
--- offenes Beweisziel:
-theorem demo (x y : ℕ) : (x + y)^2 = x^2 + 2*x*y + y^2 := by
-  rfl
+-- Falscher Satz
+example : (2 + 2 = 5) := by
+  decide
 
-
--- falscher Satz:
-theorem worth_a_try : 2 + 2 = 5 := by
-  rfl  -- Taktik schlägt fehl!
+/- Open goal: the statement is meaningful, but the proof is unfinished. -/
+theorem open_goal (x y : Nat) : x + y = y + x := by
