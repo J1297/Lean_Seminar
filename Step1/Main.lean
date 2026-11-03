@@ -1,5 +1,3 @@
-import Mathlib
-
 /-!
 # Arbeitsauftrag 1: Editor- und Auswertungsbefehle
 -/
