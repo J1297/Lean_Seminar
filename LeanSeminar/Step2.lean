@@ -46,7 +46,7 @@ Der Lean-Kernel prüft, dass der Wert wirklich den behaupteten Typ hat.
 theorem milch_mit_pfand : mitPfand preisMilch = 144 := rfl
 
 -- explizit falsch:
-theorem milch_mit_pfand_f : mitPfand preisMilch = 100 := by decide
+-- theorem milch_mit_pfand_f : mitPfand preisMilch = 100 := by decide
 
 -- Unterschied zu `#eval`:
 --   `#eval mitPfand preisMilch` rechnet einmal ein Beispiel aus.
@@ -129,7 +129,7 @@ inductive Artikel where
 #check Artikel.milch          -- Artikel.milch : Artikel
 
 -- Pattern Matching: für jeden Konstruktor genau ein Fall.
--- Fehlt ein Fall, meldet Lean einen Fehler ("missing cases").
+-- Fehlt ein Fall, meldet Lean einen Fehler ("Missing cases").
 def preis : Artikel → Nat
   | .milch => 119
   | .brot  => 249

@@ -1,0 +1,14 @@
+name = "lean_seminar"
+defaultTargets = ["LeanSeminar"]
+
+# Eine Bibliothek für alle Arbeitsaufträge, ohne gemeinsame Wurzeldatei.
+# Jede Datei ist ein eigenständiges Modul. Neue Dateien hier eintragen,
+# damit `lake build` sie mitprüft.
+[[lean_lib]]
+name = "LeanSeminar"
+roots = [
+  "LeanSeminar.Step1",
+  "LeanSeminar.Step2",
+  "LeanSeminar.Step3",
+  "LeanSeminar.Step4",
+]

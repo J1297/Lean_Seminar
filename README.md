@@ -1,23 +1,34 @@
 # Lean_Seminar
 Seminararbeit LEAN4 Einführung anhand eines Beispiels
 
-## Erster Versuch: Arbeitsauftrag 1
+Das Projekt verwendet Lean `v4.35.0` und benötigt keine externen Pakete (kein Mathlib).
 
-Das Projekt verwendet Lean `v4.19.0` und benötigt keine externen Pakete.
+### Aufbau
 
-### Dateien und Befehle
+```text
+lean-toolchain          Lean-Version (v4.35.0)
+lakefile.toml           Lake-Projekt: eine Bibliothek „LeanSeminar“
+LeanSeminar/
+  Step1.lean            Arbeitsauftrag 1: #check, #eval, Fehlerarten
+  Step2.lean            Arbeitsauftrag 2: Typ, Funktion, Proposition, Beweis
+  Step3.lean            Arbeitsauftrag 3: Term- und Taktikbeweise (fun/intro, constructor, exact)
+  Step4.lean            Arbeitsauftrag 4: double rekursiv, Induktionsbeweis double n = n + n
+```
 
-- `Main.lean` enthält `#check`- und `#eval`-Beispiele sowie zwei kleine Beweise.
-- `lean-toolchain` legt die verwendete Lean-Version fest.
-- `lakefile.toml` beschreibt das ausführbare Projekt.
+Die Dateien sind voneinander unabhängig. Jede ist in `lakefile.toml` unter `roots`
+eingetragen und wird von `lake build` mitgeprüft.
 
-Mit einer installierten Lean-Toolchain lässt sich das Projekt prüfen mit:
+### Prüfen
+
+Mit einer installierten Lean-Toolchain ([Installation](https://lean-lang.org/install/))
+im Wurzelverzeichnis:
 
 ```text
 lake build
 ```
 
-Die Ausgaben von `#check` und `#eval` erscheinen beim Öffnen von `Main.lean`
+Zum interaktiven Arbeiten den Repo-Ordner in VS Code öffnen (mit der Lean-4-Erweiterung).
+Die Ausgaben von `#check` und `#eval` erscheinen beim Öffnen einer Datei
 im Lean-Infoview. Während eines unvollständigen Beweises zeigt der Infoview
 den aktuellen Kontext und das offene Beweisziel. Ein Typfehler ist dagegen ein
 Fehler in einem Ausdruck, ein offenes Beweisziel ein noch nicht fertiggestellter
