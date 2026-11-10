@@ -23,3 +23,10 @@ den aktuellen Kontext und das offene Beweisziel. Ein Typfehler ist dagegen ein
 Fehler in einem Ausdruck, ein offenes Beweisziel ein noch nicht fertiggestellter
 Beweis, und ein falsch behaupteter Satz wird vom Kernel zurückgewiesen, sobald
 kein gültiger Beweisterm dafür erstellt werden kann.
+
+# ToDo:
+
+## Zusätzliche Befehle zur Evaluation:
+-- apply/hint 
+-- example
+-- sorry
